@@ -1,0 +1,495 @@
+/* ===== RESET SIMPLE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+}
+
+/* ===== HERO ===== */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 520px;
+    background-image: url("../img/header-bg.jpg"); /* cambia por tu imagen */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-family:
+        system-ui,
+        -apple-system,
+        Segoe UI,
+        Roboto,
+        sans-serif;
+}
+
+/* capa oscura */
+.hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55));
+}
+
+/* contenido */
+.hero__content {
+    position: relative;
+    max-width: 800px;
+    padding: 20px;
+    animation: fadeUp 0.8s ease;
+}
+
+/* etiqueta Isla Verde */
+.hero__badge {
+    display: inline-block;
+    background: #22c55e;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+}
+
+/* título */
+.hero__title {
+    font-size: clamp(48px, 5vw, 64px);
+    margin: 0 0 15px;
+    font-weight: 700;
+}
+
+/* texto pequeño "Café" */
+.hero__kicker {
+    display: block;
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.9;
+    margin-bottom: 10px;
+}
+
+/* subtítulo */
+.hero__subtitle {
+    font-size: clamp(16px, 2vw, 20px);
+    opacity: 0.95;
+    margin-bottom: 28px;
+}
+
+/* botón */
+.hero__btn {
+    display: inline-block;
+    /* background: white; */
+    background: #22c55e;
+    /* color: #0f172a; */
+    color: #ffffff;
+    padding: 14px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.hero__btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* animación */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === Valor === */
+
+.value {
+    padding: 90px 20px;
+    background: #f8fafc;
+}
+
+.value__container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.value__image {
+    width: 100%;
+}
+
+.value__img {
+    width: 100%;
+    /* height: 420px; */
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.value__content {
+    max-width: 540px;
+}
+
+.value__title {
+    font-size: clamp(30px, 4vw, 42px);
+    margin-bottom: 18px;
+    color: #0f172a;
+}
+
+.value__text {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #475569;
+    margin-bottom: 16px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .value__container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    /* .value__img {
+        height: 300px;
+    } */
+}
+
+/* === Proceso === */
+.process {
+    padding: 90px 20px;
+    background: #ffffff;
+    font-family:
+        system-ui,
+        -apple-system,
+        Segoe UI,
+        Roboto,
+        sans-serif;
+}
+
+.process__container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* encabezado */
+.process__header {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 60px;
+}
+
+.process__title {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 18px;
+}
+
+.process__intro {
+    font-size: 17px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* grid */
+.process__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* tarjetas */
+.process__card {
+    background: #f9fafb;
+    padding: 32px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.35s ease;
+    border: 1px solid #f1f5f9;
+}
+
+.process__card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* titulo paso */
+.process__step {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    color: #14532d; /* verde café Isla Verde */
+}
+
+/* texto */
+.process__text {
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+/* lista */
+.process__list {
+    margin: 0;
+    padding-left: 18px;
+    color: #4b5563;
+    line-height: 1.8;
+}
+
+.process__list li::marker {
+    color: #22c55e;
+    font-weight: bold;
+}
+
+/* subtitulos de seccion */
+.process__section-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 70px 0 30px;
+    color: #1f2937;
+    text-align: center;
+    position: relative;
+}
+
+/* linea decorativa */
+.process__section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #22c55e;
+    margin: 12px auto 0;
+    border-radius: 3px;
+}
+
+/* IMAGENES DE LAS TARJETAS */
+.process__img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    display: block;
+}
+
+/* === Aliados === */
+
+.partners {
+    padding: 60px 20px 80px;
+    background: #f5f7f6;
+}
+
+.partners__container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.partners__title {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.partners__line {
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #22c55e;
+    margin: 14px auto 0;
+    border-radius: 4px;
+}
+
+/* carrusel */
+.partners__carousel {
+    overflow: hidden;
+    position: relative;
+}
+
+/* track */
+.partners__track {
+    display: flex;
+    gap: 40px;
+    width: max-content;
+    animation: partnersScroll var(--duration, 20s) linear infinite;
+}
+
+/* pausa al hover */
+.partners__carousel:hover .partners__track {
+    animation-play-state: paused;
+}
+
+/* tarjetas */
+.partners__card {
+    background: white;
+    padding: 28px 45px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 220px;
+    transition: 0.3s;
+}
+
+.partners__card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.partners__card img {
+    max-height: 65px;
+    width: auto;
+}
+
+/* animacion continua REAL */
+@keyframes partnersScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-1 * var(--scroll-width)));
+    }
+}
+
+/* === Servicio === */
+
+.services{
+  padding:100px 20px;
+  background:linear-gradient(to bottom,#ffffff,#f1f5f9);
+}
+
+.services__container{
+  max-width:1100px;
+  margin:auto;
+}
+
+/* HEADER */
+
+.services__header{
+  text-align:center;
+  max-width:780px;
+  margin:0 auto 60px;
+}
+
+.services__title{
+  font-size:clamp(32px,4vw,44px);
+  color:#0f172a;
+  margin-bottom:18px;
+}
+
+.services__intro{
+  font-size:17px;
+  color:#475569;
+  line-height:1.7;
+  margin-bottom:10px;
+}
+
+/* GRID */
+
+.services__grid{
+  display:grid;
+  grid-template-columns:1fr;
+  justify-content:center;
+}
+
+/* CARD PREMIUM */
+
+.services__card{
+  background:#ffffff;
+  padding:45px;
+  border-radius:22px;
+  box-shadow:0 20px 55px rgba(0,0,0,.08);
+  max-width:780px;
+  margin:auto;
+  position:relative;
+  transition:.35s ease;
+}
+
+.services__card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 28px 70px rgba(0,0,0,.12);
+}
+
+/* BADGE */
+
+.services__badge{
+  position:absolute;
+  top:-14px;
+  left:30px;
+  background:#22c55e;
+  color:#fff;
+  font-size:13px;
+  padding:6px 14px;
+  border-radius:999px;
+  font-weight:600;
+  letter-spacing:.3px;
+}
+
+/* CONTENT */
+
+.services__card-title{
+  font-size:26px;
+  margin-bottom:16px;
+  color:#111827;
+}
+
+.services__text{
+  color:#475569;
+  line-height:1.7;
+  margin-bottom:12px;
+}
+
+/* LISTA PREMIUM */
+
+.services__list{
+  margin-top:18px;
+  padding-left:0;
+  list-style:none;
+}
+
+.services__list li{
+  padding-left:28px;
+  margin-bottom:10px;
+  position:relative;
+  color:#1f2937;
+  font-weight:500;
+}
+
+.services__list li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  top:0;
+  color:#22c55e;
+  font-weight:bold;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:700px){
+
+  .services{
+    padding:70px 18px;
+  }
+
+  .services__card{
+    padding:30px 24px;
+  }
+
+}

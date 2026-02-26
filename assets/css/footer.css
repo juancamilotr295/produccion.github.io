@@ -1,0 +1,124 @@
+/* ===== RESET SIMPLE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+}
+
+/* ===== FOOTER GENERAL ===== */
+.footer{
+    background:#0f172a; /* azul oscuro profesional */
+    color:#cbd5e1;
+    font-family:system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    /* margin-top:60px; */
+}
+
+/* ===== CONTENEDOR ===== */
+.footer__container{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px 40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:40px;
+}
+
+/* ===== MARCA ===== */
+.footer__logo{
+    width:140px;
+    margin-bottom:15px;
+}
+
+.footer__description{
+    line-height:1.6;
+    font-size:14px;
+    color:#94a3b8;
+}
+
+/* ===== COLUMNAS ===== */
+.footer__title{
+    color:#ffffff;
+    font-size:16px;
+    margin-bottom:18px;
+    font-weight:600;
+}
+
+/* ===== LINKS ===== */
+.footer__link{
+    display:block;
+    color:#cbd5e1;
+    text-decoration:none;
+    margin-bottom:10px;
+    font-size:14px;
+    transition:all .25s ease;
+}
+
+.footer__link:hover{
+    color:#22c55e; /* verde moderno */
+    transform:translateX(4px);
+}
+
+/* ===== TEXTO CONTACTO ===== */
+.footer__text{
+    font-size:14px;
+    margin-bottom:8px;
+    color:#94a3b8;
+}
+
+/* ===== REDES ===== */
+.footer__social{
+    margin-top:12px;
+    display:flex;
+    gap:10px;
+}
+
+.footer__link-icon {
+    width:20px;
+    height:20px;
+}
+
+.footer__social-link{
+    width:38px;
+    height:38px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#1e293b;
+    color:white;
+    border-radius:10px;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.footer__social-link:hover{
+    background:#22c55e;
+    transform:translateY(-3px);
+}
+
+/* ===== LINEA INFERIOR ===== */
+.footer__bottom{
+    border-top:1px solid #1e293b;
+    text-align:center;
+    padding:20px;
+    font-size:13px;
+    color:#94a3b8;
+}
+
+/* ===== RESPONSIVE EXTRA ===== */
+@media (max-width:600px){
+    .footer__container{
+        padding:45px 18px 30px;
+        gap:30px;
+        text-align: center;
+    }
+
+    .footer__title{
+        margin-bottom:12px;
+    }
+}

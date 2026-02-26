@@ -1,0 +1,129 @@
+/* ===== RESET SIMPLE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+}
+
+/* ===== NAVBAR BLOCK ===== */
+.navbar {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:white;
+}
+
+.navbar__container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0.6rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ===== LOGO ===== */
+.navbar__logo-img {
+    height: 60px;
+    display: block;
+}
+
+/* ===== HAMBURGER ===== */
+.navbar__toggle {
+    display: none;
+}
+
+.navbar__hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.navbar__hamburger-line {
+    width: 26px;
+    height: 3px;
+    background: #222;
+    display: block;
+    border-radius: 2px;
+}
+
+/* ===== MENU MOBILE ===== */
+.navbar__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    border-bottom: 1px solid #eee;
+}
+
+.navbar__link {
+    padding: 1rem;
+    text-decoration: none;
+    color: #333;
+    width: 100%;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.navbar__link:hover {
+    background: #22c55e8c;
+    border-radius: 8px;
+}
+
+/* BOTON CONTACTO */
+.navbar__link--button {
+    background: #22c55e;
+    color: white;
+    margin: 0.5rem 1rem 1rem;
+    border-radius: 8px;
+}
+
+.navbar__link--button:hover {
+    background: #fde047;
+}
+
+/* ===== TOGGLE FUNCION ===== */
+.navbar__toggle:checked ~ .navbar__menu {
+    max-height: 400px;
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 768px) {
+    .navbar__hamburger {
+        display: none;
+    }
+
+    .navbar__menu {
+        position: static;
+        flex-direction: row;
+        max-height: none;
+        width: auto;
+        border: none;
+        gap: 0.5rem;
+    }
+
+    .navbar__link {
+        width: auto;
+        padding: 0.6rem 0.9rem;
+    }
+
+    .navbar__link--button {
+        margin: 0;
+    }
+}

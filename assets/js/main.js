@@ -33,3 +33,16 @@ track.style.setProperty("--scroll-width", originalWidth + "px");
 /* velocidad profesional adaptable */
 const pxPerSecond = 80;
 track.style.setProperty("--duration", (originalWidth/pxPerSecond)+"s");
+
+/* Magia */
+
+function mostrarSeccion(id) {
+
+  // Oculta todas
+  document.querySelectorAll('.seccion').forEach(seccion => {
+    seccion.classList.remove('activa');
+  });
+
+  // Muestra la seleccionada
+  document.getElementById(id).classList.add('activa');
+}

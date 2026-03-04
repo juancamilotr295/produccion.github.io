@@ -1,0 +1,223 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+}
+
+/* Ajuste por navbar fixed */
+main {
+    margin-top: 80px;
+}
+
+/* ============================= */
+/* ===== HEADER SUPERIOR ======= */
+/* ============================= */
+
+.contact-header {
+    padding: 90px 20px 50px;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("../img/banner.png") center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+}
+
+.contact-header__container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.contact-header__title {
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+}
+
+.contact-header__subtitle {
+    font-size: 18px;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+/* ============================= */
+/* ===== TITULO DE SECCION ===== */
+/* ============================= */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.section-title__subtitle {
+    display: block;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #0f3d2e;
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+.section-title__main {
+    font-size: clamp(32px, 4vw, 44px);
+    font-weight: 700;
+    color: #0f172a;
+    display: inline-block;
+    padding-bottom: 18px;
+    position: relative;
+}
+
+.section-title__main::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 70px;
+    height: 3px;
+    background: linear-gradient(to right, #0f3d2e, #16a34a);
+    border-radius: 2px;
+}
+
+/* ============================= */
+/* ===== SECCIONES DINAMICAS === */
+/* ============================= */
+
+.seccion {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.seccion.activa {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================= */
+/* ===== BLOQUE GENERAL ======== */
+/* ============================= */
+
+.about-section {
+    padding: 100px 8%;
+    background: linear-gradient(to bottom, #ffffff, #f8fafc);
+}
+
+.about-section__container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ============================= */
+/* ===== GRID HISTORIA ========= */
+/* ============================= */
+
+.about-section__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-section__image img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+}
+
+.about-section__content {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+/* ============================= */
+/* ===== BLOQUES DE TEXTO ====== */
+/* ============================= */
+
+.about-section__bloque {
+    border-left: 3px solid #0f3d2e;
+    padding-left: 25px;
+}
+
+.about-section__year {
+    display: block;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #0f3d2e;
+    margin-bottom: 14px;
+}
+
+.about-section__bloque p {
+    color: #475569;
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+.about-section__bloque--final {
+    background: #f1f5f9;
+    padding: 28px;
+    border-radius: 14px;
+    border-left: none;
+}
+
+/* ============================= */
+/* ===== IMAGEN HORIZONTAL ===== */
+/* ============================= */
+
+.about-section__image-horizontal {
+    margin: 40px 0 60px;
+}
+
+.about-section__image-horizontal img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease;
+}
+
+.about-section__image-horizontal img:hover {
+    transform: scale(1.02);
+}
+
+/* ============================= */
+/* ===== RESPONSIVE ============ */
+/* ============================= */
+
+@media (max-width: 992px) {
+    .about-section__grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .about-section {
+        padding: 80px 6%;
+    }
+
+    .about-section__image-horizontal img {
+        height: 300px;
+    }
+
+    .contact-header {
+        padding: 120px 20px 60px;
+    }
+}
